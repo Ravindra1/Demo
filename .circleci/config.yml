@@ -20,8 +20,8 @@ jobs:
       # Customize the JVM maximum heap limit
       MAVEN_OPTS: -Xmx3200m
       PROVAR_HOME: ProvarLibs
-      testproject.home: Demo/TestProject
-      testproject.results: Demo/TestProject/Results
+      testproject.home: TestProject
+      testproject.results: TestProject/Results
     steps:
       - checkout
 
@@ -33,7 +33,7 @@ jobs:
           - v1-dependencies-
 
       - run: echo $PROVAR_HOME
-      - run: ant -lib $PROVAR_HOME/ant -f Demo/TestProject/ANT/build.xml
+      - run: ant -lib $PROVAR_HOME/ant -f TestProject/ANT/build.xml
 
       - save_cache:
           paths:
