@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<lockManagerState class="lockManagerState" leaseIdSeq="1379">
+  <lockManagers>
+    <mananger guid="ab9361ad-f2f5-4f70-885a-d9c74ece8283" ip="localhost" name="Provar" port="56998"/>
+  </lockManagers>
+  <resourceMap>
+    <entry>
+      <key valueClass="string">testproject/validation</key>
+      <value valueClass="list">
+        <lease granted="1534410543225" id="1379" lockManagerId="ab9361ad-f2f5-4f70-885a-d9c74ece8283" lockMode="EXCLUSIVE" requestId="2" requested="1534410543225" taskName="Validating Demo.testcase" threadId="Worker-9" totalWork="26"/>
+      </value>
+    </entry>
+  </resourceMap>
+</lockManagerState>
