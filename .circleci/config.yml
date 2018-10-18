@@ -33,7 +33,7 @@ jobs:
           - v1-dependencies-
 
       - run: echo $PROVAR_HOME
-      - run: ant -lib $PROVAR_HOME/ant -f DemoProject/build.xml
+      - run: ant -lib $PROVAR_HOME/ant -f Demo/TestProject/ANT/build.xml
 
       - save_cache:
           paths:
