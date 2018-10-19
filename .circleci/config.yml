@@ -14,14 +14,14 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-    working_directory: ~/repo
+   # working_directory: ~/repo
 
     environment:
       # Customize the JVM maximum heap limit
-      MAVEN_OPTS: -Xmx3200m
       PROVAR_HOME: ProvarLibs
-      testproject.home: Demo/TestProject
-      testproject.results: Demo/TestProject/Results
+      testproject.home: TestProject
+      testproject.results: TestProject/Results
+    
     steps:
       - checkout
 
@@ -32,15 +32,5 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: echo $PROVAR_HOME
-      - run: ant -lib $PROVAR_HOME/ant -f Demo/TestProject/ANT/build.xml
-
-      - save_cache:
-          paths:
-            - ~/.m2
-          key: v1-dependencies-{{ checksum "pom.xml" }}
-        
-      # run tests!
-      - run: mvn integration-test
-
-
+      - run: echo $PROVAR_HOME         
+      - run: ant -lib $PROVAR_HOME/ant -f TestProject/ANT/build.xml
