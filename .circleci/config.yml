@@ -41,3 +41,9 @@ jobs:
       - run: echo $testproject.home
       - run: cp -rf /home/circleci/project/TestProject/.smtp /home/circleci/Provar/
       - run: ant -lib $PROVAR_HOME/ant -f TestProject/ANT/build.xml
+      - store_artifacts:
+        path: /home/circleci/project/TestProject/Results
+        destination: Test_Run_Report.pdf
+      - store_artifacts:
+         path: /home/circleci/project/TestProject/Results
+        
