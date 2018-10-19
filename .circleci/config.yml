@@ -24,6 +24,13 @@ jobs:
     
     steps:
       - checkout
+     
+     dependencies:
+        pre:
+          - sudo apt-get install libxss1 libappindicator1 libindicator7
+          - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          - sudo dpkg -i ./google-chrome*.deb
+          - sudo apt-get install -f
 
       # Download and cache dependencies
       - restore_cache:
@@ -31,11 +38,11 @@ jobs:
           - v1-dependencies-{{ checksum "pom.xml" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-      - run: sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - 
-      - run: sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-      - run: sudo apt-get update
-      - run: sudo apt-get install -y google-chrome-stable
-      - run: sudo apt-get install -y xvfb
+     # - run: sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - 
+     # - run: sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+     # - run: sudo apt-get update
+     #- run: sudo apt-get install -y google-chrome-stable
+     # - run: sudo apt-get install -y xvfb
       - run: echo $PROVAR_HOME
       - run: echo $testproject.home
       - run: sudo xvfb ant -lib $PROVAR_HOME/ant -f TestProject/ANT/build.xml
