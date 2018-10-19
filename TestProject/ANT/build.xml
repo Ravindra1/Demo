@@ -29,7 +29,7 @@
 				invokeTestRunMonitor="true"
 				>
 		
-			<fileset dir="${testproject.home}/tests/Others"><include name="Demo.testcase"/></fileset>
+			<fileset dir="../tests/Others"><include name="Demo.testcase"/></fileset>
 
 			<emailProperties sendEmail="true" primaryRecipients="ravindra.yadav@provartesting.com" ccRecipients="" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false"/>
 			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="true" includeScreenshots="true" includeWarningMessages="false" includeInfoMessages="true" includeDebugMessages="false" includeTestStepTime="false" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
