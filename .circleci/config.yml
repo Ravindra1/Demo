@@ -7,8 +7,8 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:8-jdk
-      
+      #- image: circleci/openjdk:8-jdk
+      - image: circleci/node-jessie-browsers
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -24,13 +24,7 @@ jobs:
     
     steps:
       - checkout
-     
-     dependencies:
-        pre:
-          - sudo apt-get install libxss1 libappindicator1 libindicator7
-          - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          - sudo dpkg -i ./google-chrome*.deb
-          - sudo apt-get install -f
+    
 
       # Download and cache dependencies
       - restore_cache:
