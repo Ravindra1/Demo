@@ -19,8 +19,8 @@ jobs:
     environment:
       # Customize the JVM maximum heap limit
       PROVAR_HOME: ProvarLibs
-      testprojecthome: TestProject
-      testprojectresults: TestProject/Results
+      testproject.home: TestProject
+      testproject.results: TestProject/Results
     
     steps:
       - checkout
@@ -40,7 +40,7 @@ jobs:
      #- run: sudo apt-get install -y google-chrome-stable
      # - run: sudo apt-get install -y xvfb
       - run: echo $PROVAR_HOME
-      - run: echo $testprojecthome
+      - run: echo $testproject.home
       - run: mkdir /home/circleci/Provar
       - run: cp -rf /home/circleci/project/TestProject/.smtp /home/circleci/Provar/
       - run: ant -lib $PROVAR_HOME/ant -f TestProject/ANT/build.xml
