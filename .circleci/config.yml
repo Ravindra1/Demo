@@ -46,4 +46,6 @@ jobs:
           destination: Test_Run_Report.pdf
       - store_artifacts:
           path: /home/circleci/project/TestProject/Results
+      - store_artifacts:
+          path: /home/circleci/Provar/.smtp/smtp1.config
         
