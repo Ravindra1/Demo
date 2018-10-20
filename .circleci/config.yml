@@ -28,10 +28,10 @@ jobs:
 
       # Download and cache dependencies
       - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "pom.xml" }}
+          #keys:
+          #- v1-dependencies-{{ checksum "pom.xml" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          #- v1-dependencies-
      # - run: sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - 
      # - run: sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
      # - run: sudo apt-get update
