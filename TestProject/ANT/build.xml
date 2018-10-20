@@ -1,8 +1,8 @@
 <project default="runtests">
 	<property environment="env"/>
 	<property name="provar.home" value="${env.PROVAR_HOME}"/>
-	<property name="testproject.home" value="TestProject"/>
-	<property name="testproject.results" value="TestProject/Results"/>
+	<property name="testprojecthome" value="TestProject"/>
+	<property name="testprojectresults" value="TestProject/Results"/>
 	
 	<taskdef name="Provar-Compile" classname="com.provar.testrunner.ant.CompileTask" classpath="${provar.home}/ant/ant-provar.jar"/>
 	<taskdef name="Run-Test-Case" classname="com.provar.testrunner.ant.RunnerTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar"/>
@@ -13,15 +13,15 @@
 		<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}"/>
 	
 		<Run-Test-Case provarHome="${provar.home}" 
-				projectPath="${testproject.home}" 
-				resultsPath="${testproject.results}" 
+				projectPath="${testprojecthome}" 
+				resultsPath="${testprojectresults}" 
 				resultsPathDisposition="Replace" 
 				testEnvironment="" 
 				webBrowser="Chrome" 
 				webBrowserConfiguration="Full Screen" 
 				excludeCallableTestCases="true" 
 				salesforceMetadataCache="Reuse" 
-				projectCachePath="${testproject.home}/provarCaches" 
+				projectCachePath="${testprojecthome}/provarCaches" 
 			        licensePath="/home/circleci/project/TestProject/.licenses/License 1.properties"
 				testOutputlevel="WARNING" 
 				pluginOutputlevel="WARNING"
