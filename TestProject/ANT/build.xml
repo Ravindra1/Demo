@@ -10,7 +10,7 @@
 	
 	<target name="runtests">
 	
-		<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}"/>
+		<Provar-Compile provarHome="${provar.home}" projectPath="${testprojecthome}"/>
 	
 		<Run-Test-Case provarHome="${provar.home}" 
 				projectPath="${testprojecthome}" 
