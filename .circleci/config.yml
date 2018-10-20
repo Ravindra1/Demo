@@ -41,7 +41,6 @@ jobs:
      # - run: sudo apt-get install -y xvfb
       - run: echo $PROVAR_HOME
       - run: echo $testproject.home
-      - run: curl https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbuLmMhvdYrtE_5rcDd904r4izKgWOgdfaMSbIdu6-PUdMSf_paVunt-m-3R8zyi30Axu-U_Vsqiyo2rVH7jGPXO1TRGxF9LOZTQzx4CVhK5HdxPoL8FHiIPeFDeUK4lnJ2T2g9o6cXbETSM3RwryNp1Qo3f_J3GWKuRGFL1pIeiIK_TKvnfou5X7bk-OzDkey3YOgngqH31uKWy_Gp9WM7_qZOOUbfRnLsX-yfQOaCJYDdD3CjlVkRArktoCkQPv6xWhvrV
       - run: mkdir /home/circleci/Provar
       - run: cp -rf /home/circleci/project/TestProject/.smtp /home/circleci/Provar/
       - run: ant -lib $PROVAR_HOME/ant -f TestProject/ANT/build.xml
