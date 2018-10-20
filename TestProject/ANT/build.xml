@@ -31,7 +31,7 @@
 		
 			<fileset dir="../tests/Others"><include name="Demo.testcase"/></fileset>
 			<fileset dir="../tests/Others"><include name="Demo2.testcase"/></fileset>
-
+			<fileset dir="../tests/Others"><include name="test.testcase"/></fileset>
 			<emailProperties sendEmail="true" primaryRecipients="ravindra.yadav@provartesting.com" ccRecipients="" bccRecipients="" emailSubject="CircleCI report" attachExecutionReport="true" attachZip="true"/>
 			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="true" includeScreenshots="true" includeWarningMessages="false" includeInfoMessages="true" includeDebugMessages="true" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
 		</Run-Test-Case>
