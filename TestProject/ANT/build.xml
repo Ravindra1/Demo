@@ -13,8 +13,8 @@
 		<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}"/>
 	
 		<Run-Test-Case provarHome="${provar.home}" 
-				projectPath="${testprojecthome}" 
-				resultsPath="${testprojectresults}" 
+				projectPath="${testproject.home}" 
+				resultsPath="${testproject.results}" 
 				resultsPathDisposition="Replace" 
 				testEnvironment="" 
 				webBrowser="Chrome" 
