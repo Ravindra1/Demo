@@ -14,9 +14,9 @@ steps:
         properties:
           environmentVariables:
             - "name": "PROVAR_HOME"
-            "value": "ProvarLibs"
-           - "name": "testproject.home"
-             "value": "TestProject"
+              "value": "ProvarLibs"
+            - "name": "testproject.home"
+              "value": "TestProject"
   inputs:
     workingDirectory: ''
     buildFile: 'TestProject/ANT/build.xml'
