@@ -22,7 +22,7 @@
 				excludeCallableTestCases="true" 
 				salesforceMetadataCache="Reuse" 
 				projectCachePath="${testproject.home}/provarCaches" 
-			        licensePath="/home/circleci/project/TestProject/.licenses/License 1.properties"
+			        licensePath="TestProject/.licenses/License 1.properties"
 				testOutputlevel="WARNING" 
 				pluginOutputlevel="WARNING"
 				stopTestRunOnError="false"
@@ -33,7 +33,7 @@
 			<fileset dir="../tests/Others"><include name="Demo2.testcase"/></fileset>
 			<fileset dir="../tests/Others"><include name="test.testcase"/></fileset>
 			<fileset dir="../tests/Others"><include name="Test Case 2.testcase"/></fileset>
-			
+			<!--licensePath="/home/circleci/project/TestProject/.licenses/License 1.properties"-->
 			<emailProperties sendEmail="true" primaryRecipients="ravindra.yadav@provartesting.com" ccRecipients="" bccRecipients="" emailSubject="CircleCI report" attachExecutionReport="true" attachZip="true"/>
 			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="true" includeScreenshots="true" includeWarningMessages="false" includeInfoMessages="true" includeDebugMessages="true" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
 		</Run-Test-Case>
