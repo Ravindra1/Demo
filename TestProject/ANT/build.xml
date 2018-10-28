@@ -1,6 +1,6 @@
 <project default="runtests">
 	<property environment="env"/>
-	<property name="provar.home" value="${env.PROVAR_HOME}"/>
+	<property name="provar.home" value="/home/vsts/work/1/s/ProvarLibs"/>
 	<property name="testproject.home" value="TestProject"/>
 	<property name="testproject.results" value="TestProject/Results"/>
 	
