@@ -10,9 +10,9 @@ steps:
 - task: Ant@1
 
   inputs:
-    test.project: TestProject
-    PROVAR_HOME: ProvarLibs
     workingDirectory: ''
+    test.project: 'TestProject'
+    PROVAR_HOME: 'ProvarLibs'
     buildFile: 'TestProject/ANT/build.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
