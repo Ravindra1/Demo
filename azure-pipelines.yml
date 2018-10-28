@@ -8,12 +8,7 @@ pool:
 
 steps:
 - task: Ant@1
-  properties:
-    environmentVariables:
-      - "name": "PROVAR_HOME"
-        "value": "ProvarLibs"
-      - "name": "testproject.home"
-         "value": "TestProject"
+
   inputs:
     workingDirectory: ''
     buildFile: 'TestProject/ANT/build.xml'
