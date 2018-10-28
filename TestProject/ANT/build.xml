@@ -1,7 +1,7 @@
 <project default="runtests">
 	<property environment="env"/>
-	<property name="provar.home" value="ProvarLibs"/>
-	<property name="testproject.home" value="/home/vsts/work/1/s/TestProject"/>
+	<property name="provar.home" value="/home/vsts/work/1/s/ProvarLibs"/>
+	<property name="testproject.home" value="TestProject"/>
 	<property name="testproject.results" value="TestProject/Results"/>
 	
 	<taskdef name="Provar-Compile" classname="com.provar.testrunner.ant.CompileTask" classpath="${provar.home}/ant/ant-provar.jar"/>
