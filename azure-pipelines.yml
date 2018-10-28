@@ -11,9 +11,9 @@ steps:
 
   inputs:
     workingDirectory: ''
-    test.project: 'TestProject'
-    PROVAR_HOME: 'ProvarLibs'
-    buildFile: 'TestProject/ANT/build.xml'
+    test.project: '/home/vsts/work/1/s/TestProject'
+    PROVAR_HOME: '/home/vsts/work/1/s/ProvarLibs'
+    buildFile: '/home/vsts/work/1/s/TestProject/ANT/build.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
